@@ -1,0 +1,50 @@
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: #f7f7f7;
+}
+
+.slideContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%; 
+    background: #f0f0f0;
+    padding: 12% 0;
+}
+
+.text {
+    font-size: 3vw;
+    font-weight: 600; 
+    color: #4e8683;
+    text-align: center;
+}
+
+.text2 {
+    font-size: 3.5vw;
+    font-weight: 600; 
+    color: #00b8d3;
+    text-align: center;
+}
+
+.button {
+    padding: 10px 20px; 
+    background-color: #00b8d3; 
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.6vw;
+
+    border-radius: 40px; 
+    margin-top: 20px;
+}

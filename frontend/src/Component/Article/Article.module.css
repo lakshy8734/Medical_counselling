@@ -1,0 +1,156 @@
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.slide {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 97% !important;
+    border-radius: 5px;
+    padding-bottom: 5%;
+    background: #fff;
+    margin: 0 auto;
+    height: 400px; 
+}
+
+.slideContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; 
+    width: 100%;
+    background: #f4f4f4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    margin-bottom: 4%;
+    height: 100%; 
+    overflow: hidden; 
+}
+
+.text {
+    font-size: 1.2vw;
+    font-weight: 600;
+    color: black;
+    text-align: center;
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;
+}
+
+@media (max-width: 1024px) {
+    .text {
+        font-size: 1.1rem;
+        -webkit-line-clamp: 4; 
+    }
+}
+
+@media (max-width: 768px) {
+    .text {
+        font-size: 1.2rem;
+        -webkit-line-clamp: 5;
+    }
+}
+
+@media (max-width: 480px) {
+    .text {
+        font-size: 1rem;
+        -webkit-line-clamp: 6;
+    }
+}
+
+
+.cardImage {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+ 
+.button {
+    color: #00b8d3;
+    text-decoration: none;
+    width: 100%;
+    font-size: 1vw;
+    margin-top: 5%;
+    padding: 5%;
+    border-radius: 40px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+@media (max-width: 1024px) {
+    .button {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .button {
+        font-size: 1.2rem; 
+    }
+}
+
+@media (max-width: 480px) {
+    .button {
+        font-size: 1rem; 
+    }
+}
+
+.prevButton,
+.nextButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prevButton {
+    left: 10px;
+}
+
+.nextButton {
+    right: 10px;
+}
+
+.prevButton:hover,
+.nextButton:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+
+
+.btn{
+    margin-top: 5%;
+    padding: 8px 50px; 
+    background-color: #00b8d3; 
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5vw;
+    border-radius: 40px; 
+    margin-top: 20px;
+}
+
+
+@media screen and (max-width:768px) {
+    
+    .btn{
+        font-size: 4vw;
+    }
+
+}

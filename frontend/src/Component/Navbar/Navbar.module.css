@@ -1,0 +1,135 @@
+.navbar {
+    height: 2rem;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3%;
+
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.276);
+}
+
+.logo {
+    height: 3rem;
+    cursor: pointer;
+}
+
+.navLinks {
+    display: flex;
+    font-size: 1.4vw;
+    gap: 4vw;
+    color: #67839a;
+    font-weight: 300;
+    list-style: none;
+}
+
+@media screen and (max-width:1024px) {
+
+    .navLinks {
+        display: none;
+    }
+
+}
+
+.navLink {
+    cursor: pointer;
+    position: relative;
+    padding: 3% 0;
+}
+
+.navLink:hover .subMenu {
+    display: block;
+}
+
+.navLink:hover .subMenu2 {
+    display: block;
+}
+
+.subMenu {
+    display: none;
+    position: absolute;
+    top: 90%;
+    width: 60vw;
+    left: 0;
+    background-color: #e9e3d6;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding: 1rem;
+    padding-bottom: 2.8vw;
+    list-style: none;
+    margin: 0;
+}
+
+.subMenu li {
+    width: 40%;
+    padding: 2px;
+    cursor: pointer;
+    position: relative;
+    color: white;
+    color: #67839a;
+    font-weight: 300;
+}
+
+.subMenu li:hover {
+    color: #00b8d3;
+    font-weight: 600;
+    border-left: 5px solid #00b8d3;
+}
+
+.subMenu li:hover .subSubMenu{
+    display: block;
+}
+
+.subSubMenu{
+    position: absolute;
+    left: 90%;
+    top: 0;
+    display: none;
+}
+
+.subMenu li:hover .subSubIMG{
+    display: block;
+}
+
+.subSubIMG{
+    position: absolute;
+    display: none;
+    top: 0;
+    right: -145%;
+    border-radius: 10px;
+    border: 3.5px solid white;
+}
+
+.subSubMenu li{
+   list-style: none;
+   width: 24vw;
+}
+
+.subMenu2 {
+    display: none;
+    position: absolute;
+    top: 90%;
+    width: 30vw;
+    left: 0;
+    background-color: #e9e3d6;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 2rem;
+    list-style: none;
+    margin: 0;
+}
+
+.subMenu2 li {
+
+    padding: 6px;
+    cursor: pointer;
+    color: white;
+    color: #67839a;
+    font-weight: 300;
+}
+
+.subMenu2 li:hover {
+    color: #00b8d3;
+    font-weight: 600;
+    border-left: 5px solid #00b8d3;
+}

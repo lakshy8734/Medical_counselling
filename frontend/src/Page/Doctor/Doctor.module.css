@@ -1,0 +1,73 @@
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+
+.banner{
+    background-image: url(../../Assets/banner-artical.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+
+.options {
+    background: white;
+    color: #67839a;
+    font-size: 1.09vw;
+    font-weight: 500;
+    padding: 9px 15px;
+    border-radius: 40px;
+    display: inline-block;
+    margin-bottom: 2%;
+    margin-left: 1%;
+    cursor: pointer;
+}
+
+
+.search{
+    all: unset;
+    width: 100%;
+    background: white;
+    padding: 18px 20px;
+    border: 1.3px solid #00b8d3;
+    border-radius: 30px;
+}
+
+
+.icon{
+    position: absolute;
+    top: 15%;
+    right: -30px;
+    font-size: 3vw;
+    color: #00b8d3;
+
+    border-radius: 50px;
+    border: 1px solid #00b8d3;
+    padding: 10px;
+}
+
+
+.main{
+    padding: 2%;
+    width: 100%;
+    display: flex;
+    align-items: start;
+}
+
+.card{
+    width: 95%;
+    margin-bottom: 4%;
+}
+
+.btn{
+    padding: 10px 20px;
+    background-color: #00b8d3;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5vw;
+    border-radius: 40px;
+    margin-top: 20px;
+}

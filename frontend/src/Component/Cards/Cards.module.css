@@ -1,0 +1,147 @@
+.cardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 10%;
+}
+
+@media screen and (min-width: 641px) and (max-width: 900px) {
+    .cardsContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8vw;
+        padding-top: 10%;
+        margin-top: 3em;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .cardsContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20vw;
+        padding-top: 10%;
+        margin-top: 3em;
+    }
+}
+
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+@media (min-width: 640px) {
+    .card {
+        width: 45%;
+
+    }
+}
+
+@media (min-width: 1024px) {
+    .card {
+        width: 30%;
+    }
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+
+.cardImage {
+    width: 55%;
+    border-radius: 10px;
+    height: auto;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+    margin: -60px auto 0;
+}
+
+
+.cardContent {
+    padding: 20px;
+    padding-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.cardTitle {
+    font-size: 5vw;
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+@media (min-width: 640px) {
+    .cardTitle {
+        font-size: 2.5vw;
+    }
+}
+
+@media (min-width: 1024px) {
+    .cardTitle {
+        font-size: 1.5vw;
+    }
+}
+
+.cardText {
+    font-size: 4.5vw;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #67839a;
+    text-align: center;
+}
+
+@media (min-width: 640px) {
+    .cardText {
+        font-size: 2vw;
+    }
+}
+
+@media (min-width: 1024px) {
+    .cardText {
+        font-size: 1.35vw;
+    }
+}
+
+
+.readMore {
+    margin-top: 10%;
+    font-size: 4vw;
+    font-weight: 600;
+    color: #00b8d3;
+    border: none;
+    border-radius: 5px;
+    background: none;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+@media (min-width: 640px) {
+    .readMore {
+        font-size: 2vw;
+    }
+}
+
+@media (min-width: 1024px) {
+    .readMore {
+        font-size: 1.2vw;
+    }
+}
+
+.readMore:hover {
+    color: #008c9e;
+}

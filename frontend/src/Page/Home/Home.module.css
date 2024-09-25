@@ -1,0 +1,193 @@
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.home {
+    width: 100%;
+    padding: 2%;
+    background: linear-gradient(51deg, rgb(210, 255, 252) -1%, rgb(255, 233, 226) 101%);
+}
+
+.bgcolor {
+    background-image: url(../../Assets/BannerBg.png);
+
+}
+
+.bgcolor::after {
+    background: linear-gradient(51deg, rgb(210, 255, 252) -1%, rgb(255, 233, 226) 101%);
+}
+
+
+.movingImage {
+    animation: moveUpDown 2s infinite;
+    transition: all 0.3s linear;
+}
+
+@keyframes moveUpDown {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+
+.btn3 {
+    padding-left: 10%;
+    padding: 15px 25px;
+    border-radius: 4px;
+    background-color: #ff8a01;
+    color: #fff;
+    font-size: 1.2vw;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s linear;
+}
+
+@media screen and (max-width:768px) {
+
+    .btn3 {
+        font-size: 4vw;
+    }
+}
+
+.btn3:hover {
+    background: rgb(4, 69, 4);
+}
+
+.home h1 {
+    font-weight: 600;
+    text-align: center;
+}
+
+.home p {
+    margin-top: 2%;
+    font-weight: 500;
+    color: #67839a;
+    text-align: center;
+}
+
+.home .sec {
+    display: flex;
+    width: 100%;
+    margin-top: 1%;
+}
+
+
+
+.imageContainer {
+    width: 48%;
+    margin-bottom: 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.image {
+    width: 30%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.description {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1em;
+    color: #333;
+}
+
+
+
+.home .sec .right img {
+    width: 100%;
+}
+
+
+.home .homebtn {
+    padding: 10px 20px;
+    background-color: #00b8d3;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 40px;
+    margin-top: 20px;
+}
+
+
+.text {
+    color: #67839a;
+}
+
+
+.text .homebtn {
+    padding: 10px 20px;
+    background-color: #00b8d3;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5vw;
+    border-radius: 40px;
+    margin-top: 20px;
+    transition: all 0.3s linear;
+}
+
+@media screen and (max-width:768px) {
+
+    .text .homebtn {
+        font-size: 4vw;
+    }
+
+}
+
+.text .homebtn:hover {
+    background-color: #03a8c2;
+}
+
+
+.refer {
+    background-image: url(../../Assets/referral-banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding: 30px 10px;
+    border-radius: 20px;
+    background-size: 100% 100%;
+    box-shadow: 0 8px 24px hsla(210, 8%, 62%, .2);
+}
+
+@media screen and (max-width:768px) {
+
+    .refer {
+        background-size: cover
+    }
+
+}
+
+
+.homebtn2 {
+    padding: 8px 20px;
+    background-color: #00b8d3;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5vw;
+    border-radius: 40px;
+    margin-top: 20px;
+
+    transition: all 0.3s linear;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .homebtn2 {
+
+        font-size: 3.5vw;
+    }
+
+}

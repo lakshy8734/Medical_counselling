@@ -39,7 +39,7 @@ function Doctor() {
         </div>
       </section>
 
-      <section className="flex gap-2 flex-wrap">
+      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 
         <DocCard
           name="Esha Chauhan"
@@ -81,14 +81,12 @@ function Doctor() {
           counselingType="Individual"
           availableSlot="Mon, 26 Aug 11:00 AM"
         />
-
-
-
       </section>
+
 
       <section>
 
-        <DoctorSlider />
+        {/* <DoctorSlider /> */}
 
       </section>
 

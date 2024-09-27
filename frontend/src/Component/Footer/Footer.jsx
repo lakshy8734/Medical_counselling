@@ -1,5 +1,6 @@
 import React from 'react'
 import style from './Footer.module.css'
+import { useNavigate, Link } from 'react-router-dom';
 
 import { MdOutlinePhoneInTalk } from "react-icons/md";
 import { LiaCommentsSolid } from "react-icons/lia";
@@ -7,6 +8,9 @@ import { FaWhatsapp, FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/
 import { AiOutlineYoutube } from "react-icons/ai";
 
 function Footer() {
+
+    const navigate = useNavigate();
+
     return (
         <>
             {/* Footer Main Content */}
@@ -16,7 +20,11 @@ function Footer() {
                         We Help With
                     </h1>
                     <ul className='font-normal lg:text-base text-sm text-slate-100 text-center'>
-                        <li className='py-1'>Relationship Counselling</li>
+
+                        <Link to="/relationship-counselling">
+                            <li className='py-1'>Relationship Counselling</li>
+                        </Link>
+
                         <li className='py-1'>Stress Anxiety Depression</li>
                         <li className='py-1'>Confidence</li>
                         <li className='py-1'>Trauma</li>
@@ -33,7 +41,11 @@ function Footer() {
                         Self Help
                     </h1>
                     <ul className='font-normal lg:text-base text-sm text-slate-100 text-center'>
-                        <li className='py-1'>Articles</li>
+
+                        <Link to="/articles">
+                            <li className='py-1'>Articles</li>
+                        </Link>
+
                         <li className='py-1'>14 Days Program</li>
                     </ul>
                 </div>
@@ -44,9 +56,9 @@ function Footer() {
                         For Business
                     </h1>
                     <ul className='font-normal lg:text-base text-sm text-slate-100 text-center'>
-                        <li  className='py-1'>Corporates</li>
-                        <li  className='py-1'>Institutions</li>
-                        <li  className='py-1'>Strategic Partners</li>
+                        <li className='py-1'>Corporates</li>
+                        <li className='py-1'>Institutions</li>
+                        <li className='py-1'>Strategic Partners</li>
                     </ul>
                 </div>
 
@@ -55,10 +67,10 @@ function Footer() {
                         Assessments
                     </h1>
                     <ul className='font-normal lg:text-base text-sm text-slate-100 text-center'>
-                        <li  className='py-1'>Am I stressed?</li>
-                        <li  className='py-1'>Am I Sad Or Depressed?</li>
-                        <li  className='py-1'>How am I sleeping?</li>
-                        <li  className='py-1'>Am I Anxious?</li>
+                        <li className='py-1'>Am I stressed?</li>
+                        <li className='py-1'>Am I Sad Or Depressed?</li>
+                        <li className='py-1'>How am I sleeping?</li>
+                        <li className='py-1'>Am I Anxious?</li>
                     </ul>
                 </div>
 

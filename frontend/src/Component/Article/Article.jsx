@@ -10,9 +10,9 @@ import { IoArrowBackOutline } from "react-icons/io5";
 import { IoMdArrowRoundForward } from "react-icons/io";
 
 const slides = [
-    { imgSrc: Art, title: "Online Therapy Can Help You", buttonText: "Read Article", buttonLink: "/link1" },
-    { imgSrc: Art, title: "Discover Experienced ", buttonText: "Read Article", buttonLink: "/link2" },
-    { imgSrc: Art, title: "Assess Your Mental Health & Wellness", buttonText: "Read Article", buttonLink: "/link3" },
+    { imgSrc: Art, title: "Online Therapy Can Help You", buttonText: "Read Article", buttonLink: "" },
+    { imgSrc: Art, title: "Discover Experienced ", buttonText: "Read Article", buttonLink: "" },
+    { imgSrc: Art, title: "Assess Your Mental Health & Wellness", buttonText: "Read Article", buttonLink: "" },
 ];
 
 function Article() {

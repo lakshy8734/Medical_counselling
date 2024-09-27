@@ -16,7 +16,7 @@ function Articles() {
                 <Navbar />
             </nav>
 
-            <section className={`${style.banner} w-[100%] flex`}>
+            <section className={`${style.banner} w-[100%] flex items-center`}>
 
                 <div className='p-3 w-[50%]'>
 
@@ -99,9 +99,11 @@ function Articles() {
 
                 </div>
 
+
                 <div className='p-3 w-[50%]'>
                     <img src={img} alt="" />
                 </div>
+
             </section>
 
 

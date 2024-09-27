@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import styles from './Navbar.module.css';
 
+
 import relationship from '../../Assets/relationship.png'
 import stress1 from '../../Assets/stress-header-1.jpg'
 import conf from '../../Assets/conf-header-final.jpg'
@@ -12,6 +13,7 @@ import ChildCentric from '../../Assets/Child-Centric-Challenges.png'
 import Skill from '../../Assets/Skill-Development.png'
 import parenting1 from '../../Assets/parenting1.jpg'
 import ahd from '../../Assets/ahd.png'
+import logo from '../../Assets/logo.png'
 
 function Navbar() {
 
@@ -21,20 +23,14 @@ function Navbar() {
 
 
 
-    const toggleForm = () => {
-
-        const newChange = !Change;
-
-        setChange(newChange);
-
-        if (newChange) {
-            console.log("Navigating to /Login-in");
-            navigate('/Login-in');
-        } else {
+    const toggleForm = (formType) => {
+        if (formType === 'signup') {
             console.log("Navigating to /sign-in");
             navigate('/sign-in');
+        } else if (formType === 'login') {
+            console.log("Navigating to /Login-in");
+            navigate('/Login-in');
         }
-
     };
 
 
@@ -42,8 +38,7 @@ function Navbar() {
         <div className={styles.navbar}>
             <div>
                 <img
-                    src="your-logo-url-here.png"
-                    alt="logo"
+                    src={logo}
                     className={styles.logo}
                     onClick={() => navigate('/')}
                 />
@@ -109,7 +104,7 @@ function Navbar() {
 
                         </li>
 
-                        <li onClick={() => navigate('/stress-anxiety-depression')}>
+                        <li onClick={() => navigate('/')}>
                             Stress Anxiety Depression
 
                             <ul style={{ top: '-100%' }} className={`${styles.subSubMenu}`}>
@@ -131,7 +126,7 @@ function Navbar() {
                             </ul>
 
                         </li>
-                        <li onClick={() => navigate('/confidence')}>
+                        <li onClick={() => navigate('/')}>
                             Confidence
 
                             <ul style={{ top: '-200%' }} className={`${styles.subSubMenu}`}>
@@ -153,7 +148,7 @@ function Navbar() {
                             </ul>
 
                         </li>
-                        <li onClick={() => navigate('/trauma')}>
+                        <li onClick={() => navigate('/')}>
                             Trauma
 
                             <ul style={{ top: '-300%', paddingBottom: '50%' }} className={`${styles.subSubMenu}`}>
@@ -166,7 +161,8 @@ function Navbar() {
                             </ul>
 
                         </li>
-                        <li onClick={() => navigate('/lgbtq')}>
+
+                        <li onClick={() => navigate('/')}>
                             LGBTQ+
 
                             <ul style={{ top: '-400%', paddingBottom: '50%' }} className={`${styles.subSubMenu}`}>
@@ -179,7 +175,8 @@ function Navbar() {
                             </ul>
 
                         </li>
-                        <li onClick={() => navigate('/lifestyle-issues')}>Lifestyle Issues
+
+                        <li onClick={() => navigate('')}>Lifestyle Issues
 
                             <ul style={{ top: '-500%' }} className={`${styles.subSubMenu}`}>
                                 <li>Addiction</li>
@@ -194,7 +191,8 @@ function Navbar() {
                             </ul>
 
                         </li>
-                        <li onClick={() => navigate('/women-centric-challenges')}>Women Centric Challenges
+
+                        <li onClick={() => navigate('')}>Women Centric Challenges
 
                             <ul style={{ top: '-600%', paddingBottom: '50%' }} className={`${styles.subSubMenu}`}>
                                 <li>Motherhood Challenges</li>
@@ -208,7 +206,8 @@ function Navbar() {
                             </ul>
 
                         </li>
-                        <li onClick={() => navigate('/managing-workplace')}>Managing Workplace
+
+                        <li onClick={() => navigate('')}>Managing Workplace
 
                             <ul style={{ top: '-700%' }} className={`${styles.subSubMenu}`}>
                                 <li>Tough Boss</li>
@@ -227,7 +226,8 @@ function Navbar() {
                             </ul>
 
                         </li>
-                        <li onClick={() => navigate('/parenting')}>Parenting
+
+                        <li onClick={() => navigate('')}>Parenting
 
                             <ul style={{ top: '-800%', paddingBottom: '50%' }} className={`${styles.subSubMenu}`}>
                                 <li>Parenting Conflicts</li>
@@ -242,7 +242,7 @@ function Navbar() {
                             </ul>
 
                         </li>
-                        <li onClick={() => navigate('/adhd')}>ADHD
+                        <li onClick={() => navigate('')}>ADHD
 
                             <ul style={{ top: '-900%', paddingBottom: '80%' }} className={`${styles.subSubMenu}`}>
                                 <li>Inattentive ADHD</li>
@@ -259,35 +259,35 @@ function Navbar() {
 
                 </li>
 
-                <li className={styles.navLink} onClick={() => navigate('/self-help')}>
+                <li className={styles.navLink} >
                     Self Help
 
                     <ul className={styles.subMenu2}>
-                        <li onClick={() => navigate('/free-assessment')}>Free Assessment</li>
-                        <li onClick={() => navigate('/14-days-program')}>14 Days Program</li>
-                        <li onClick={() => navigate('/self-help-program')}>Self Help Program</li>
-                        <li onClick={() => navigate('/wellness-stories')}>Wellness Stories</li>
-                        <li onClick={() => navigate('/articles')}>Articles</li>
+                        <li onClick={() => navigate('/pricing')}>Free Assessment</li>
+                        <li>14 Days Program</li>
+                        <li >Self Help Program</li>
+                        <li >Wellness Stories</li>
+                        <li >Articles</li>
                     </ul>
 
                 </li>
 
-                <li className={styles.navLink} onClick={() => navigate('/know-your-counselor')}>
-                    Counsellors
-                </li>
-
-                <li className={styles.navLink} onClick={() => navigate('/collaborations')}>
-                    Collaborations
+                <li className={styles.navLink} >
+                    Doctors
                     <ul className={styles.subMenu2}>
-                        <li onClick={() => navigate('/Corporate-stories')}>Corporate Employee Assistance</li>
-                        <li onClick={() => navigate('/Training-Program-Counsellors')}>Training Program for Counsellors</li>
+                        <li onClick={() => navigate('/Stories-telling')} >Stories telling</li>
+                        <li>Training Program for Counsellors</li>
                     </ul>
                 </li>
 
                 <li className={styles.navLink} onClick={() => navigate('/pricing')}>Get Started</li>
 
-                <li className={styles.navLink} onClick={toggleForm}>
-                    {Change ? 'Log In' : 'Sign Up'}
+                <li className={styles.navLink} onClick={() => toggleForm('signup')}>
+                    Sign Up
+                </li>
+
+                <li className={styles.navLink} onClick={() => toggleForm('login')}>
+                    Log In
                 </li>
 
             </ul>

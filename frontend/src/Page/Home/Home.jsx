@@ -46,9 +46,9 @@ function Home() {
           </p>
 
           <div className='p-4 pt-6 pb-[10%] lg:pb-[15%]'>
-            <button className={style.btn3}>
+            {/* <button className={style.btn3}>
               Ask a Doctor Online
-            </button>
+            </button> */}
           </div>
         </div>
 
@@ -134,7 +134,7 @@ function Home() {
 
       <section className='p-2'>
 
-        <DoctorSlider />
+        {/* <DoctorSlider /> */}
 
         <div className='flex justify-center'>
           <Link to='/know-your-counselor'>

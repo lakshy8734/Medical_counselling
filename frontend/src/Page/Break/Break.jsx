@@ -6,6 +6,8 @@ import img from '../../Assets/Link.jpeg'
 import Navbar from '../../Component/Navbar/Navbar';
 import Footer from '../../Component/Footer/Footer';
 
+import { Link } from 'react-router-dom';
+
 
 import discover2 from '../../Assets/reflect-old.png'
 import dec3 from '../../Assets/rekindle-old.png'
@@ -20,72 +22,74 @@ function Break() {
                 <Navbar />
             </nav>
 
-            <section className={`${style.banner}  px-[5%] py-[10%]`}>
-
-                <h1 className='text-4xl text-white font-bold'>
+            <section className={`${style.banner} px-4 py-8 sm:px-[5%] sm:py-[10%]`}>
+                <h1 className="text-2xl sm:text-4xl text-white font-bold">
                     Break Up Counselling
                 </h1>
 
-                <p className='text-lg text-white font-medium mt-5'>
+                <p className="text-base sm:text-lg text-white font-medium mt-4 sm:mt-5">
                     We have helped more than 1000 people in dealing with breakup. Let's help you get through this hurdle now.
                 </p>
 
-                <div className='mt-[5%] flex gap-5'>
+                <div className="mt-4 mb-8 sm:mt-[5%] flex flex-col sm:flex-row gap-3 sm:gap-5">
+                    <Link to="/know-your-counselor">
+                        <button className="bg-cyan-500 text-white py-2 px-4 sm:px-6 rounded-full">
+                            Find My Therapist
+                        </button>
+                    </Link>
 
-                    <button className="bg-cyan-500 text-white py-2 px-6 rounded-full">
-                        Find My Therapist
-                    </button>
-
-                    <button className="bg-cyan-800 text-white py-2 px-6 rounded-full">
-                        Get Started
-                    </button>
-
+                    <Link to="/pricing">
+                        <button className="bg-cyan-800 text-white py-2 px-4 sm:px-6 rounded-full">
+                            Get Started
+                        </button>
+                    </Link>
                 </div>
-
             </section>
 
-            <section className='w-[100%] flex justify-center'>
-
-                <div className='w-[90%] bg-white shadow-xl relative top-[-4em] rounded-lg p-6'>
-
-                    <h2 className="text-3xl font-bold mb-4">How Does A Breakup Feel?</h2>
-
-                    <p className="text-slate-500 font-semibold leading-relaxed">
+            {/* Responsive Overlapping Section */}
+            <section className="z-0 w-[100%] flex justify-center relative">
+                <div className="w-[90%] bg-white shadow-xl relative top-[-3em] sm:top-[-4em] rounded-lg p-4 sm:p-6 z-10">
+                    <h2 className="text-2xl sm:text-3xl md:text-left text-center font-bold mb-3 sm:mb-4">
+                        How Does A Breakup Feel?
+                    </h2>
+                    <p className=" text-slate-500 font-semibold leading-relaxed">
                         Empty, hurt, lonely, and angry are just the tip of the emotional iceberg that a person experiences in a breakup. A relationship breakup is not only the loss of a partner but an imagined future, certainty, and a part of ourselves as well. Moving on is tough, and one can experience a whole range of difficult feelings, complicated thoughts, and obsessive behaviour patterns, which can affect one’s productivity at work, and the quality of relationships with friends and family. This is where therapy helps to overcome breakup turmoil in our life.
                     </p>
                 </div>
-
             </section>
 
 
-            <section className='w-[100%] flex justify-center items-center flex-col'>
 
-                <div className='w-[90%] bg-white shadow-2xl  rounded-lg p-6'>
+            <section className="w-full flex justify-center items-center flex-col px-4 sm:px-0">
+                <div className="w-full sm:w-[90%] bg-white shadow-2xl rounded-lg p-4 sm:p-6">
+                    <h2 className="text-2xl sm:text-3xl text-center sm:text-left font-bold mb-4">
+                        When To Seek Therapy For Break Up?
+                    </h2>
 
-                    <h2 className="text-3xl font-bold mb-4">When To Seek Therapy For Break Up?</h2>
-
-                    <p className="text-gray-600 leading-relaxed mb-4">
+                    <p className="text-gray-600 leading-relaxed mb-4 text-sm sm:text-base">
                         Different people have different ways of coping with challenges in life. Some resort to perpetual self-doubt and hopelessness of finding a similar partner again, and a few resort to negative coping behaviour to revenge, stalk and rebound relationships. Some common signs of struggle are:
                     </p>
 
-                    <ul className="list-disc list-inside text-gray-600 mb-4">
+                    <ul className="list-disc list-inside text-gray-600 mb-4 text-sm sm:text-base">
                         <li>Withdrawing from your near and dear ones</li>
                         <li>Overthinking about your ex</li>
                         <li>Stalking or overthinking about their current partner</li>
                         <li>Frequent emotional outbursts, not being “oneself”</li>
-                        <li>Resorting to numbing emotions through drinking, smoking, drugs, rebound relationships, casual sex, binge eating, etc.</li>
+                        <li>
+                            Resorting to numbing emotions through drinking, smoking, drugs, rebound relationships, casual sex, binge eating, etc.
+                        </li>
                     </ul>
 
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
                         In such cases, a Breakup can lead to significant mental health concerns ranging from anxiety, post-traumatic stress, or even depression. It is very natural to expect that a relationship you invested in will not be forgotten in a short time.
                     </p>
                 </div>
-
             </section>
 
-            <section className='w-[100%] mt-5 flex flex-row justify-center items-center'>
 
-                <div className='w-[90%] flex items-center bg-white shadow-2xl  rounded-lg p-6'>
+            <section className='w-[100%] mt-5  flex flex-row justify-center items-center'>
+
+                <div className='w-[90%] md:flex items-center bg-white shadow-2xl  rounded-lg p-6'>
 
                     <div className="w-full md:w-1/2">
                         <img
@@ -94,18 +98,23 @@ function Break() {
                             className="rounded-lg object-cover w-full h-full"
                         />
                     </div>
+
                     <div className="w-full md:w-1/2 md:pl-6 mt-6 md:mt-0">
-                        <h2 className="text-3xl font-bold mb-4">How Break Up Therapy Helps:</h2>
-                        <ul className="list-disc list-inside text-gray-600 mb-6">
+                        <h2 className="md:text-3xl text-xl font-bold mb-4">How Break Up Therapy Helps:</h2>
+                        <ul className="list-disc  list-inside text-gray-600 mb-6">
                             <li>It Helps Express The Pain</li>
                             <li>Find Stability In Emotional Chaos</li>
                             <li>Grieve & Process The Loss</li>
                             <li>Learn Skills & Get perspective For Closure</li>
                             <li>Find Hope For a Better Future</li>
                         </ul>
-                        <button className="bg-blue-500 text-white px-6 py-3 rounded-full shadow hover:bg-blue-600">
-                            Get Started
-                        </button>
+                        <div className='flex justify-center md:justify-start'>
+                            <Link to='/pricing'>
+                                <button className="bg-blue-500 text-white px-6 py-2 rounded-full shadow hover:bg-blue-600">
+                                    Get Started
+                                </button>
+                            </Link>
+                        </div>
                     </div>
 
                 </div>
@@ -126,9 +135,11 @@ function Break() {
                     </div>
                     <div className="flex justify-center space-x-4 mt-6">
 
-                        <button className="bg-cyan-500 text-white py-2 px-6 rounded-full">
-                            Find My Therapist
-                        </button>
+                        <Link to='/know-your-counselor'>
+                            <button className="bg-cyan-500 text-white py-2 px-6 rounded-full">
+                                Find My Therapist
+                            </button>
+                        </Link>
 
                     </div>
                 </div>
@@ -198,19 +209,22 @@ function Break() {
                     </div>
 
                     <div className="w-full md:w-1/3 p-4">
-                        <div className="flex absolute flex-col text-center bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div className="flex relative flex-col text-center bg-white rounded-lg shadow-lg overflow-hidden">
 
+                            {/* Changed Image */}
                             <img
                                 src={dec3}
                                 alt="Therapy"
                                 className="object-cover w-full"
                             />
 
+                            {/* Changed Ribbon Color */}
                             <div className="absolute top-4 left-[-3%] top-[5%] bg-pink-400 text-white text-xs font-bold py-1 px-3 transform -rotate-45 translate-x-[-10%] translate-y-[-40%]">
                                 Best Price
                             </div>
 
                             <div className="p-6">
+                                {/* Changed Text Colors */}
                                 <h2 className="text-xl font-bold text-cyan-600 mb-2">DISCOVER</h2>
                                 <h3 className="text-lg font-bold">4 SESSIONS</h3>
                                 <p className="text-gray-500 mb-4">Couple / Individual Appointments</p>
@@ -221,10 +235,10 @@ function Break() {
                                 <h4 className="text-2xl font-bold text-cyan-500 mt-4">₹3749</h4>
                             </div>
 
+                            {/* Changed Button Color */}
                             <button className="bg-pink-400 text-white font-semibold py-4 px-4 rounded-b-lg">
                                 Get Therapy
                             </button>
-
                         </div>
                     </div>
                 </div>

@@ -52,31 +52,55 @@ function Start() {
 
             <section className={`${style.banner} p-3`}>
 
-                <div className='w-[100%] flex justify-center'>
+                <div className="w-full flex justify-center px-4 sm:px-0">
+                    <div className="w-full sm:w-[90%] bg-white flex flex-col sm:flex-row justify-around items-center py-6 sm:py-0">
+                        {/* First Image */}
+                        <img
+                            src={price1}
+                            alt="Img"
+                            className="w-full md:block hidden sm:w-auto max-w-xs mb-4 sm:mb-0"
+                        />
 
-                    <div className='w-[90%] bg-white flex justify-around items-center'>
-                        <img src={price1} alt="" />
-
-                        <div className='text-center'>
-                            <h1 className='text-2xl font-bold'>
+                        {/* Text Section */}
+                        <div className="text-center px-4 sm:px-0">
+                            <h1 className="text-lg sm:text-2xl font-bold">
                                 UNLOCK YOUR WELLBEING NOW
                             </h1>
-                            <h2 className='text-xl font-bold text-cyan-500'>
+                            <h2 className="text-lg sm:text-xl font-bold text-cyan-500">
                                 Get 10% Off All Therapy Plans!
                             </h2>
-                            <h3 className='text-xl font-medium mt-4 cursor-pointer' onClick={handleCopy}>
+                            <h3
+                                className="text-base sm:text-xl font-medium mt-4 cursor-pointer"
+                                onClick={handleCopy}
+                            >
                                 Click To Copy
                             </h3>
-                            {copySuccess && <p className='text-green-500 mt-2'>Offer code copied to clipboard!</p>}
-                            {showCode && <p onClick={handleCopy} className=' cursor-pointer text-xl text-cyan-500 border border-2 divide-slate-700  border-dotted font-bold mt-4'>{offerCode}</p>}
-
+                            {copySuccess && (
+                                <p className="text-green-500 mt-2">
+                                    Offer code copied to clipboard!
+                                </p>
+                            )}
+                            {showCode && (
+                                <p
+                                    onClick={handleCopy}
+                                    className="cursor-pointer text-base sm:text-xl text-cyan-500 border border-slate-700 border-dotted font-bold mt-4 py-2 px-4 inline-block"
+                                >
+                                    {offerCode}
+                                </p>
+                            )}
                         </div>
 
-                        <img src={price2} alt="" />
+                        {/* Second Image */}
+                        <img
+                            src={price2}
+                            alt=""
+                            className="w-full md:block hidden  sm:w-auto max-w-xs mt-4 sm:mt-0"
+                        />
                     </div>
                 </div>
 
-                <div className='p-3'>
+
+                <div>
                     <h1 className='text-center mt-5 underline text-2xl font-bold'>
                         Planes
                     </h1>
@@ -140,19 +164,22 @@ function Start() {
                         </div>
 
                         <div className="w-full md:w-1/3 p-4">
-                            <div className="flex absolute flex-col text-center bg-white rounded-lg shadow-lg overflow-hidden">
+                            <div className="flex relative flex-col text-center bg-white rounded-lg shadow-lg overflow-hidden">
 
+                                {/* Changed Image */}
                                 <img
                                     src={dec3}
                                     alt="Therapy"
                                     className="object-cover w-full"
                                 />
 
+                                {/* Changed Ribbon Color */}
                                 <div className="absolute top-4 left-[-3%] top-[5%] bg-pink-400 text-white text-xs font-bold py-1 px-3 transform -rotate-45 translate-x-[-10%] translate-y-[-40%]">
                                     Best Price
                                 </div>
 
                                 <div className="p-6">
+                                    {/* Changed Text Colors */}
                                     <h2 className="text-xl font-bold text-cyan-600 mb-2">DISCOVER</h2>
                                     <h3 className="text-lg font-bold">4 SESSIONS</h3>
                                     <p className="text-gray-500 mb-4">Couple / Individual Appointments</p>
@@ -163,43 +190,64 @@ function Start() {
                                     <h4 className="text-2xl font-bold text-cyan-500 mt-4">₹3749</h4>
                                 </div>
 
+                                {/* Changed Button Color */}
                                 <button className="bg-pink-400 text-white font-semibold py-4 px-4 rounded-b-lg">
                                     Get Therapy
                                 </button>
-
                             </div>
                         </div>
+
+
                     </div>
 
                 </div>
 
 
-                <div className="flex justify-around items-center rounded my-8 bg-gradient-to-r  from-cyan-100 to-pink-100 py-8">
+                <div className="grid grid-cols-2 gap-6 sm:flex sm:flex-wrap sm:justify-around items-center rounded my-4 px-1 bg-gradient-to-r from-cyan-100 to-pink-100 py-8">
                     <div className="flex flex-col items-center">
-                        <img src={one} alt="45 mins" className="w-20 rounded-full mb-2" />
-                        <p className="text-gray-600 text-center font-semibold">Every Session Is<br />For 45 Mins</p>
+                        <img src={one} alt="45 mins" className="w-16 sm:w-20 rounded-full mb-2" />
+                        <p className="text-gray-600 md:text-base text-sm text-center font-semibold">
+                            Every Session Is<br />For 45 Mins
+                        </p>
                     </div>
+
                     <div className="flex flex-col items-center">
-                        <img src={two} alt="Refund Policy" className="w-20 rounded-full mb-2" />
-                        <p className="text-gray-600 text-center font-semibold">Lifetime Validity<br />30 Day Refund Policy</p>
+                        <img src={two} alt="Refund Policy" className="w-16 sm:w-20 rounded-full mb-2" />
+                        <p className="text-gray-600 text-center md:text-base text-sm font-semibold">
+                            Lifetime Validity<br />30 Day Refund Policy
+                        </p>
                     </div>
+
                     <div className="flex flex-col items-center">
-                        <img src={three} alt="Uniform Pricing" className="w-20 rounded-full mb-2" />
-                        <p className="text-gray-600 text-center font-semibold">Uniform Pricing<br />Video | Call | Chat</p>
+                        <img src={three} alt="Uniform Pricing" className="w-16 sm:w-20 rounded-full mb-2" />
+                        <p className="md:text-base text-sm text-gray-600 text-center font-semibold">
+                            Uniform Pricing<br />Video | Call | Chat
+                        </p>
                     </div>
+
                     <div className="flex flex-col items-center">
-                        <img src={couple} alt="Couple Sessions" className="w-20 rounded-full mb-2" />
-                        <p className="text-gray-600 text-center font-semibold">Couple Appointment<br />= 2 Sessions</p>
+                        <img src={couple} alt="Couple Sessions" className="w-16 sm:w-20 rounded-full mb-2" />
+                        <p className="md:text-base text-sm text-gray-600 text-center font-semibold">
+                            Couple Appointment<br />= 2 Sessions
+                        </p>
                     </div>
+
                     <div className="flex flex-col items-center">
-                        <img src={four} alt="Customer Support" className="w-20 rounded-full mb-2" />
-                        <p className="text-gray-600 text-center font-semibold">7-Day Customer<br />Care Support</p>
+                        <img src={four} alt="Customer Support" className="w-16 sm:w-20 rounded-full mb-2" />
+                        <p className="md:text-base text-sm text-gray-600 text-center font-semibold">
+                            7-Day Customer<br />Care Support
+                        </p>
                     </div>
+
                     <div className="flex flex-col items-center">
-                        <img src={six} alt="Confidential" className="w-20 rounded-full mb-2" />
-                        <p className="text-gray-600 text-center font-semibold">100% Confidential<br />& Secure</p>
+                        <img src={six} alt="Confidential" className="w-16 sm:w-20 rounded-full mb-2" />
+                        <p className="md:text-base text-sm text-gray-600 text-center font-semibold">
+                            100% Confidential<br />& Secure
+                        </p>
                     </div>
                 </div>
+
+
 
 
             </section>

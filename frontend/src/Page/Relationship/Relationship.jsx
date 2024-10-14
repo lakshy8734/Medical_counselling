@@ -2,9 +2,15 @@ import React from 'react'
 import Navbar from '../../Component/Navbar/Navbar';
 import Footer from '../../Component/Footer/Footer';
 
+import { FaArrowCircleRight } from "react-icons/fa";
+
 import style from './Relationship.module.css'
+import { Link } from 'react-router-dom';
 
 function Relationship() {
+
+
+
     return (
         <>
             <nav className={style.nav}>
@@ -13,23 +19,32 @@ function Relationship() {
 
             <section className={`${style.relationSec} p-10`}>
 
-                <h1 className='text-white text-5xl font-semibold pt-[6%]'>
+                <h1 className='text-white text-3xl sm:text-4xl lg:text-5xl font-semibold pt-[6%]'>
                     Relationship Counselling
                 </h1>
 
-                <p className='text-white py-4 font-semibold text-xl'>
+                <p className='text-white py-2 sm:py-3 lg:py-4 font-semibold text-lg sm:text-xl'>
                     Get Relationship help from experienced counsellors who are capable of assessing individual & partner problems
                 </p>
 
-                <h2 className='text-white py-4 font-semibold text-2xl'>
+                <h2 className='text-white py-2 sm:py-3 lg:py-4 font-semibold text-lg sm:text-xl lg:text-2xl'>
                     Couples | Partners | Friends | Family | Special Bonds
                 </h2>
 
 
-                <div className='flex gap-8 mt-10'>
-                    <button className='text-white px-8 py-4 bg-cyan-400 rounded-full'>Find My Therapist</button>
-                    <button className='text-white px-12 py-4 bg-cyan-600 rounded-full'>Get Started</button>
+
+                <div className='flex flex-col sm:flex-row gap-4 sm:gap-6 mt-4 sm:mt-8'>
+
+                    <Link to='/know-your-counselor' className='text-white text-sm px-4 sm:px-6 py-2 sm:py-3 bg-cyan-400 hover:bg-cyan-500 transition-all duration-300 rounded-full shadow-lg'>
+                        Find My Therapist
+                    </Link>
+
+                    <Link to="/pricing" className='text-white px-4 text-sm sm:px-8 py-2 sm:py-3 bg-cyan-600 hover:bg-cyan-700 transition-all duration-300 rounded-full shadow-lg'>
+                        Get Started
+                    </Link>
                 </div>
+
+
 
             </section>
 
@@ -53,25 +68,24 @@ function Relationship() {
                         Seeking relationship advice allows you and your partner to get an unbiased view of your individual personalities and combined dynamics. BetterLYF relationship therapists work on individual & couple relationships, the relationship counseling sessions assist you with your relationship challenges in the most effective way.
                     </p>
 
-                    <button className="bg-cyan-400 mt-7 px-10 py-3 rounded-full text-white cursor-pointer">
-                        Get Started
-                    </button>
+                    <Link to='/pricing'>
+                        <button className="bg-cyan-400 mt-7 text-sm px-10 py-3 rounded-full text-white cursor-pointer">
+                            Get Started
+                        </button>
+                    </Link>
                 </div>
 
                 {/* Sidebar with Buttons */}
-                <div className="w-full lg:w-[35%] mt-7  flex justify-center">
+                <div className="w-full lg:w-[35%] mt-7 flex justify-center">
                     <div className="grid grid-cols-2 gap-8">
-                        {[
-                            'Break Up', 'Cheating & Infidelity', 'Couple', 'Divorce',
-                            'Dating', 'Friendship', 'Family', 'Intimacy',
-                            'Marriage', 'Pre Marital', 'Toxic Relationship'
-                        ].map((category) => (
-                            <div
-                                key={category}
-                                className="p-3 bg-white flex items-center justify-center border border-gray-300 text-cyan-500 rounded-lg shadow-md text-center"
+                        {categories.map(({ name, link }) => (
+                            <Link
+                                key={name}
+                                to={link}
+                                className="p-3 bg-white flex items-center justify-around border border-gray-300 text-cyan-500 rounded-lg shadow-md text-center"
                             >
-                                {category} ➡
-                            </div>
+                                {name} <FaArrowCircleRight />
+                            </Link>
                         ))}
                     </div>
                 </div>
@@ -92,11 +106,14 @@ function Relationship() {
                             <div key={index} className="bg-white p-6 rounded-lg shadow-lg">
                                 <h2 className="font-bold text-xl mb-3">{item.title}</h2>
                                 <p className="text-slate-600 mb-4">{item.description}</p>
-                                <span className="text-cyan-500 font-medium">
-                                    View Details &gt;
-                                </span>
+                                <Link to={item.link}>
+                                    <span className="text-cyan-500 cursor-pointer font-medium">
+                                        View Details &gt;
+                                    </span>
+                                </Link>
                             </div>
                         ))}
+
                     </div>
 
                 </section>
@@ -114,9 +131,20 @@ function Relationship() {
                             <p><span className="text-cyan-500 font-bold">Action:</span> The Relationship Counselor will help to chart a course of action and step by step take up each problem area of the relationship like controlling behaviour, personality clashes, lack of space, or autonomy, fair fighting, boundary setting and equip you with skills to resolve conflicts, change perspectives, find a middle ground or part amicably.</p>
                             <p><span className="text-cyan-500 font-bold">Progress:</span> You may find noticeable changes after a few sessions where you would be able to identify triggers, deal with conflict effectively and are able to break the cycle of negative interactions.</p>
                         </div>
-                        <div className="flex space-x-4 mt-6">
-                            <button className="bg-cyan-500 text-white py-3 px-6 rounded-lg">Find My Therapist</button>
-                            <button className="bg-teal-800 text-white py-3 px-6 rounded-lg">Get Started</button>
+                        <div className="flex space-x-3 mt-4">
+
+                            <Link to='/know-your-counselor'>
+                                <button  className="bg-cyan-500  text-sm text-white py-2 px-3 rounded-lg hover:bg-cyan-600 transition-all duration-300 shadow-md">
+                                    Find My Therapist
+                                </button>
+                            </Link>
+
+                            <Link to='/pricing'>
+                                <button className="bg-teal-800 text-sm text-white py-2 px-3 rounded-lg hover:bg-teal-900 transition-all duration-300 shadow-md">
+                                    Get Started
+                                </button>
+                            </Link>
+
                         </div>
                     </div>
 
@@ -140,6 +168,7 @@ const cards = [
     {
         title: 'Break Up',
         description: "A relationship ending could be detrimental to our mental health. Even when a relationship is no longer healthy, a breakup may be excruciatingly painful since it represents the loss of not only your partner but also the dreams and promises you both shared. The beginnings of romantic partnerships are loaded with hope for the future. However, when it comes to an end, we are filled with disappointment and grief. By going to counselling you'll be able to talk about any feelings or troubles you're having and develop healthy coping skills to deal with them.",
+        link: '/break-up',
     },
     {
         title: 'Cheating & Infidelity',
@@ -153,4 +182,19 @@ const cards = [
         title: 'Divorce',
         description: "Divorce is a complex matter which impacts multiple lives. Divorce therapy can help individuals process the emotions and challenges that arise from the end of a marriage. It can also provide support in developing new ways of coping and moving forward post-divorce.",
     },
+];
+
+
+const categories = [
+    { name: 'Break Up', link: '/break-up' },
+    { name: 'Cheating & Infidelity', link: '/cheating-infidelity' },
+    { name: 'Couple', link: '/couple' },
+    { name: 'Divorce', link: '/divorce' },
+    { name: 'Dating', link: '/dating' },
+    { name: 'Friendship', link: '/friendship' },
+    { name: 'Family', link: '/family' },
+    { name: 'Intimacy', link: '/intimacy' },
+    { name: 'Marriage', link: '/marriage' },
+    { name: 'Pre Marital', link: '/pre-marital' },
+    { name: 'Toxic Relationship', link: '/toxic-relationship' }
 ];

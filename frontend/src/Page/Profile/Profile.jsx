@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '../../Component/Navbar/Navbar';
 import Footer from '../../Component/Footer/Footer';
 import style from './Profile.module.css'
-
+import { Link } from 'react-router-dom';
 import quote from '../../Assets/quote.svg'
 
 
@@ -20,7 +20,7 @@ function Profile() {
 
 
 
-                <div className={` flex flex-col md:flex-row  p-4 md:p-8`}>
+                <div className={` flex flex-col-reverse md:flex-row  p-4 md:p-8`}>
 
                     {/* Left Section */}
                     <div className="md:w-1/2 bg-blue-900 p-6 rounded-l-lg flex flex-col justify-between">
@@ -37,9 +37,11 @@ function Profile() {
                                 />
                             </div>
                             <div className="ml-4">
-                                <button className="bg-cyan-500 text-white font-semibold py-2 px-4 rounded-lg">
-                                    Schedule Now
-                                </button>
+                                <Link to='/sign-in'>
+                                    <button className="bg-cyan-500 text-white font-semibold py-2 px-4 rounded-lg">
+                                        Schedule Now
+                                    </button>
+                                </Link>
                             </div>
                         </div>
                         <div className="mt-4 text-white">
@@ -153,9 +155,11 @@ function Profile() {
                         </div>
 
                         <div className='flex justify-center mt-5'>
-                            <button className='text-white ml-[5%] mt[7%] text-xl font-medium border rounded-full py-2 px-10 bg-cyan-500 hover:text-white transition-all duration-300 ease-linear border-cyan-500'>
-                                Book Session
-                            </button>
+                            <Link to='/pricing'>
+                                <button className='text-white w-full ml-[5%] mt-[7%] text-sm font-medium border rounded-full py-2 px-10 bg-cyan-500 hover:text-white transition-all duration-300 ease-linear border-cyan-500'>
+                                    Book Session
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </section>

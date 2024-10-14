@@ -45,32 +45,30 @@ function Footer() {
                         <Link to="/articles">
                             <li className='py-1'>Articles</li>
                         </Link>
-
-                        <li className='py-1'>14 Days Program</li>
+                        <Link to="/pricing">
+                            <li className='py-1'>Free Assessment</li>
+                        </Link>
                     </ul>
                 </div>
 
 
                 <div className='w-full lg:w-1/5 mb-5 lg:mb-0'>
                     <h1 className='text-white text-center text-lg font-medium pb-5'>
-                        For Business
+                        Counsellors
                     </h1>
-                    <ul className='font-normal lg:text-base text-sm text-slate-100 text-center'>
-                        <li className='py-1'>Corporates</li>
-                        <li className='py-1'>Institutions</li>
-                        <li className='py-1'>Strategic Partners</li>
+                    <ul className='font-normal cursor-pointer lg:text-base text-sm text-slate-100 text-center'>
+                        <li className='py-1'>Counsellors</li>
+                        
                     </ul>
                 </div>
 
                 <div className='w-full lg:w-1/5 mb-5 lg:mb-0'>
                     <h1 className='text-white text-center text-lg font-medium pb-5'>
-                        Assessments
+                        Get Started
                     </h1>
-                    <ul className='font-normal lg:text-base text-sm text-slate-100 text-center'>
-                        <li className='py-1'>Am I stressed?</li>
-                        <li className='py-1'>Am I Sad Or Depressed?</li>
-                        <li className='py-1'>How am I sleeping?</li>
-                        <li className='py-1'>Am I Anxious?</li>
+                    <ul className='font-normal cursor-pointer  lg:text-base text-sm text-slate-100 text-center'>
+                        <li className='py-1'>Get Started</li>
+                        
                     </ul>
                 </div>
 
@@ -79,18 +77,18 @@ function Footer() {
                         Contact
                     </h1>
                     <ul className='flex justify-center gap-3 mb-5'>
-                        <li className={`bg-white p-3 rounded-xl text-4xl ${style.gradient}`}>
+                        <li className={`bg-white cursor-pointer  p-3 rounded-xl text-4xl ${style.gradient}`}>
                             <MdOutlinePhoneInTalk />
                         </li>
-                        <li className={`bg-white p-3 rounded-xl text-4xl ${style.gradient}`}>
+                        <li className={`bg-white cursor-pointer  p-3 rounded-xl text-4xl ${style.gradient}`}>
                             <LiaCommentsSolid />
                         </li>
-                        <li className={`bg-white p-3 rounded-xl text-4xl ${style.gradient}`}>
+                        <li className={`bg-white cursor-pointer  p-3 rounded-xl text-4xl ${style.gradient}`}>
                             <FaWhatsapp />
                         </li>
                     </ul>
 
-                    <div className='flex justify-center mb-4'>
+                    <div className='flex cursor-pointer  justify-center mb-4'>
                         <button className={style.btn}>
                             Book Session
                         </button>

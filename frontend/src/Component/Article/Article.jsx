@@ -10,9 +10,9 @@ import { IoArrowBackOutline } from "react-icons/io5";
 import { IoMdArrowRoundForward } from "react-icons/io";
 
 const slides = [
-    { imgSrc: Art, title: "Online Therapy Can Help You", buttonText: "Read Article", buttonLink: "" },
-    { imgSrc: Art, title: "Discover Experienced ", buttonText: "Read Article", buttonLink: "" },
-    { imgSrc: Art, title: "Assess Your Mental Health & Wellness", buttonText: "Read Article", buttonLink: "" },
+    { imgSrc: Art, title: "Online Therapy Can Help You", buttonText: "Read Article", buttonLink: "/subblog" },
+    { imgSrc: Art, title: "Discover Experienced ", buttonText: "Read Article", buttonLink: "/subblog" },
+    { imgSrc: Art, title: "Assess Your Mental Health & Wellness", buttonText: "Read Article", buttonLink: "/subblog" },
 ];
 
 function Article() {
@@ -64,7 +64,9 @@ function Article() {
     };
 
     return (
+
         <div className="pt-8 pb-8 p-1 h-full">
+            
             <h1 className="mt-4 mb-5 text-center text-2xl md:text-4xl font-semibold">
                 Articles From Our Expert Therapists
             </h1>

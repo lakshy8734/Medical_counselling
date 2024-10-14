@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import styles from './Navbar.module.css';
+import Sidebar from '../Sidebar/Sidebar';
 
 
 import relationship from '../../Assets/relationship.png'
@@ -19,7 +20,11 @@ function Navbar() {
 
     const navigate = useNavigate();
 
-    const [Change, setChange] = useState(false);
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+    const toggleSidebar = () => {
+        setIsSidebarOpen(!isSidebarOpen);
+    };
 
 
 
@@ -41,6 +46,7 @@ function Navbar() {
                     src={logo}
                     className={styles.logo}
                     onClick={() => navigate('/')}
+                    alt='logo'
                 />
             </div>
 
@@ -108,7 +114,6 @@ function Navbar() {
                             Stress Anxiety Depression
 
                             <ul style={{ top: '-100%' }} className={`${styles.subSubMenu}`}>
-                                <li>Generalized Anxiety Disorder</li>
                                 <li>Obsessive Compulsive Disorder</li>
                                 <li>Panic Disorder</li>
                                 <li>Phobia Disorder</li>
@@ -126,6 +131,7 @@ function Navbar() {
                             </ul>
 
                         </li>
+
                         <li onClick={() => navigate('/')}>
                             Confidence
 
@@ -148,6 +154,7 @@ function Navbar() {
                             </ul>
 
                         </li>
+
                         <li onClick={() => navigate('/')}>
                             Trauma
 
@@ -264,21 +271,13 @@ function Navbar() {
 
                     <ul className={styles.subMenu2}>
                         <li onClick={() => navigate('/pricing')}>Free Assessment</li>
-                        <li>14 Days Program</li>
-                        <li >Self Help Program</li>
-                        <li >Wellness Stories</li>
-                        <li >Articles</li>
+                        <li onClick={() => navigate('/Stories-telling')}>Wellness Stories</li>
+                        <li onClick={() => navigate('/articles')}>Articles</li>
                     </ul>
 
                 </li>
 
-                <li className={styles.navLink} >
-                    Doctors
-                    <ul className={styles.subMenu2}>
-                        <li onClick={() => navigate('/Stories-telling')} >Stories telling</li>
-                        <li>Training Program for Counsellors</li>
-                    </ul>
-                </li>
+                <li className={styles.navLink} onClick={() => navigate('/know-your-counselor')}>Counsellors</li>
 
                 <li className={styles.navLink} onClick={() => navigate('/pricing')}>Get Started</li>
 
@@ -290,7 +289,20 @@ function Navbar() {
                     Log In
                 </li>
 
+
             </ul>
+
+            <div className={styles.ham}>
+                <button className={styles.hamburger} onClick={toggleSidebar}>
+                    <span className={styles.bar}></span>
+                    <span className={styles.bar}></span>
+                    <span className={styles.bar}></span>
+
+                </button>
+            </div>
+            <Sidebar isSidebarOpen={isSidebarOpen} closeSidebar={toggleSidebar} />
+
+
         </div>
     );
 }

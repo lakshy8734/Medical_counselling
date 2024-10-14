@@ -86,9 +86,11 @@ function Home() {
 
         <div className="flex justify-center">
 
-          <button className={style.homebtn}>
-            Start Therapy
-          </button>
+          <Link to='/pricing'>
+            <button className={style.homebtn}>
+              Start Therapy
+            </button>
+          </Link>
 
         </div>
 
@@ -122,9 +124,11 @@ function Home() {
             You can improve relationships, build confidence, overcome peer pressure, cope with stress, beat anxiety, and outgrow depression. It will empower you with skill sets to
             <strong style={{ color: '#00b8d3' }}> become the best version of yourself.</strong>
             <div>
-              <button className={`${style.homebtn} `}>
-                Start Therapy
-              </button>
+              <Link to='/pricing'>
+                <button className={`${style.homebtn} `}>
+                  Start Therapy
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -165,9 +169,11 @@ function Home() {
           </h4>
 
           <div className="flex justify-center mt-4">
-            <button className={style.homebtn2}>
-              Get Started
-            </button>
+            <Link to='/sign-in'>
+              <button className={style.homebtn2}>
+                Get Started
+              </button>
+            </Link>
           </div>
         </div>
       </section>

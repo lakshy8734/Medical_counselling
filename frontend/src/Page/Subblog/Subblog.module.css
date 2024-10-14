@@ -6,9 +6,6 @@
 
 
 
-
-
-
 .main{
     padding: 2%;
     padding-top: 5%;
@@ -17,6 +14,15 @@
     align-items: start;
 }
 
+@media screen and (max-width:1024px) {
+    .main{
+    
+        display: flex;
+        flex-direction: column;
+        
+    }
+    
+}
 
 .btn{
     padding: 5px 20px;
@@ -28,6 +34,19 @@
     margin-top: 20px;
 }
 
+
+@media screen and (max-width:768px) {
+
+    .btn{
+        font-size: 4vw;
+        padding: 5px 15px;
+    }
+
+
+}
+
+
+
 .btn1{
     padding: 5px 40px;
     background-color: #007384;
@@ -36,4 +55,13 @@
     font-size: 1.2vw;
     border-radius: 40px;
     margin-top: 20px;
+}
+
+@media screen and (max-width:768px) {
+
+    .btn1{
+        font-size: 4vw;
+        padding: 5px 15px;
+    }
+
 }
